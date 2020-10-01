@@ -21,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Car = (props) => {
     const classes = useStyles()
-    const id = props.match.params.id
-    const selectedCar = cars.find((car) => id == car.id)
+    const id = parseInt(props.match.params.id)
+    const selectedCar = cars.find((car) => id ===car.id)
    return (
      <Container className={classes.containerLarge} maxWidth="sm">
          <Paper className="car-container">
